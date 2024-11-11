@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    transition: 0.5s ease-in-out;
+}
+
+body {
+    font-family: Rubik, sans-serif;
+    background: linear-gradient(45deg, #ff80ab, #ff4081, #d500f9);
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite;
+    width: 100%;
+    height: 100vh;
+    -webkit-tap-highlight-color: transparent;
+    transition: 0.5s ease-in-out;
+    user-select: none;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+button {
+    margin: 10px;
+    height: 50px;
+    width: 70px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+}
+
+#yes:active {
+    background: #632d5d;
+}
+
+#no:active {
+    background: #310e25;
+}
+
+.containar {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#yes {
+    background-color: #94418c;
+    font-weight: bold;
+    color: white;
+}
+
+#no {
+    background-color: #4b1639;
+    font-weight: bold;
+    color: white;
+}
+
+#yay {
+    display: none;
+    position: absolute;
+    margin-top: -100px;
+    font-weight: 900;
+    font-size: 25px;
+}
+
+#yay1 {
+    display: none;
+    width: 160px;
+    position: absolute;
+    margin-top: -250px;
+}
+
+#can1 {
+    width: 100px;
+    position: absolute;
+    margin-top: -250px;
+    display: block;
+}
+
+#can {
+    position: absolute;
+    margin-top: -100px;
+    font-weight: 600;
+    display: block;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+img:active {
+    transform: scale3d(1.2, 1.2, 1.2);
+}
+
+img {
+    transition: 0.5s ease-in-out;
+}
+
+.confetti {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+}
+
+.confetti-piece {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #ffeb3b;
+    opacity: 0;
+    animation: confettiFall 3s linear infinite;
+}
+
+@keyframes confettiFall {
+    0% { transform: translateY(-100px); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
